@@ -5,7 +5,7 @@
  * 例如 电源适配
  * 目的 : 兼容转换
  */
-class Message{
+class Message1{
     public function send(){
         echo "阿里云发送短信！" . PHP_EOL;
     }
@@ -14,7 +14,7 @@ class Message{
     }
 }
 
-class JiguangSDKAdapter extends Message{
+class JiguangSDKAdapter extends Message1{
     private $message;
 
     public function __construct($message){
@@ -37,7 +37,7 @@ class JiguangMessage{
         echo "极光发送推送！" . PHP_EOL;
     }
 }
-class BaiduYunSDKAdapter extends Message{
+class BaiduYunSDKAdapter extends Message1{
     private $message;
 
     public function __construct($message){
@@ -62,7 +62,7 @@ class BaiduYunMessage{
 
 $jiguangMessage = new JiguangMessage();
 $baiduYunMessage = new BaiduYunMessage();
-$message = new Message();
+$message = new Message1();
 
 // 原来的老系统发短信，使用阿里云
 $message->send();
