@@ -1,0 +1,16 @@
+{
+    "name": "csw/codetest",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Csw\\Codetest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "陈松蔚",
+            "email": "chensongyu2687@dingtalk.com"
+        }
+    ],
+    "require": {}
+}

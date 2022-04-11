@@ -43,6 +43,7 @@ class MessageFactory
     public function GetMessage(Template $template, $type = 'ali')
     {
         $key = md5($template->GetTemplate() . $type);
+        //把创建的消息模板放进数组里，不用重复创建，跟缓存差不多，不过缓存的是对象
         if (!key_exists($key, $this->messages)) {
             if ($type == 'ali') {
                 $this->messages[$key] = new AliYunMessage($template);
